@@ -4,6 +4,7 @@
 
 ## :rocket: Sobre o desafio
 Criar um backend completo *(em desenvolvimento)* de um "serviço de agendamentos de beleza" utilizando as seguintes tecnologias: 
+- Yarn
 - Express
 - Docker
 - Sequelize
@@ -45,6 +46,14 @@ Criar um backend completo *(em desenvolvimento)* de um "serviço de agendamentos
 	"password": "abcdef"
 }
 ```
+
+### Iniciando
+````
+Dev: yarn dev
+````
+````
+Debug: yarn dev:debug
+````
 
 ## :memo: Licença
 
