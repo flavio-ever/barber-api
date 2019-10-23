@@ -12,6 +12,9 @@ Criar um backend completo *(em desenvolvimento)* de um "serviço de agendamentos
 - Prettier
 - Editor config
 - JWT
+- BCryptjs
+- Sucrase
+- Yup
 - Mongo
 - Redis
 - Postgres e etc
