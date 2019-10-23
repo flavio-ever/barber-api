@@ -3,7 +3,7 @@
 </h3>
 
 ## :rocket: Sobre o desafio
-Criar um backend completo de um salão de beleza utilizando as seguintes tecnologias...
+Criar um backend completo *(em desenvolvimento)* de um "serviço de agendamentos de beleza" utilizando as seguintes tecnologias: 
 - Express
 - Docker
 - Sequelize
@@ -17,9 +17,7 @@ Criar um backend completo de um salão de beleza utilizando as seguintes tecnolo
 
 ### Rotas
 
-- `POST /user`: A rota deve receber `id` e `title` dentro do corpo e cadastrar um novo projeto dentro de um array no seguinte formato: `{ id: "1", title: 'Novo projeto', tasks: [] }`; Certifique-se de enviar tanto o ID quanto o título do projeto no formato string com aspas duplas.
-
-- `GET /projects`: A rota de criação de usuário;
+- `GET /users`: A rota de criação de usuário;
 ```js
 {
 	"name": "Flavio Ever",
@@ -28,7 +26,7 @@ Criar um backend completo de um salão de beleza utilizando as seguintes tecnolo
 }
 ```
 
-- `OUT /projects`: A rota de manipulação de usuário. Importante passar o `authenticate (Bearer)` como parâmetro;
+- `PUT /users`: A rota de manipulação de usuário. Importante passar o `authenticate (Bearer)` como parâmetro;
 ```js
 {
 {
