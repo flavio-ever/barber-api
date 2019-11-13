@@ -1,5 +1,5 @@
 <h3 align="center">
-  Desafio 2: Backend GoBarber
+  Desafio 2: Backend
 </h3>
 
 ## :rocket: Sobre o desafio
