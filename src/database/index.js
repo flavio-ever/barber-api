@@ -1,22 +1,24 @@
 import Sequelize from 'sequelize';
+import DatabaseConfig from '../config/database';
 
-import databaseConfig from '../config/database';
-
+// Models
 import User from '../app/models/User';
 
+// Buffer
 const models = [User];
 
-class Database {
+class DataBase {
   constructor() {
     this.init();
   }
 
   init() {
-    this.connection = new Sequelize(databaseConfig);
+    // Inicializa conexao
+    this.connection = new Sequelize(DatabaseConfig);
 
-    // Percorrer array
+    // Percorre o buffer (vetor) e acessa o método inicializador
     models.map(model => model.init(this.connection));
   }
 }
 
-export default new Database();
+export default new DataBase();
