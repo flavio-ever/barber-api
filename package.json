@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/server",
-    "dev:debug": "nodemon --inspect src/server"
+    "dev:debug": "nodemon --inspect src/server",
+    "queue": "nodemon src/queue"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
