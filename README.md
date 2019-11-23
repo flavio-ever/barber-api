@@ -1,9 +1,9 @@
 <h3 align="center">
-  Desafio 2: Backend
+  Backend GoBarber
 </h3>
 
 ## :rocket: Sobre o desafio
-Criar um backend completo *(em desenvolvimento)* de um "serviço de agendamentos de beleza" utilizando as seguintes tecnologias: 
+Backend completo de um "serviço de agendamentos de beleza utilizando as seguintes tecnologias: 
 - Yarn
 - Express
 - Docker
