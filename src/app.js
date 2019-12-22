@@ -5,6 +5,7 @@ import 'express-async-errors';
 import * as Sentry from '@sentry/node';
 import path from 'path';
 import Youch from 'youch';
+import cors from 'cors';
 import sentryConfig from './config/sentry';
 import routes from './routes';
 
@@ -20,6 +21,12 @@ class App {
     // Log de erros (antes de qualquer evento)
     Sentry.init(sentryConfig);
     this.server.use(Sentry.Handlers.requestHandler());
+
+    this.server.use(
+      cors({
+        // origin: 'http://endereco',
+      })
+    );
 
     this.server.use(express.json());
     this.server.use(

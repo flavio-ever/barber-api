@@ -1,5 +1,6 @@
 import * as Yup from 'yup';
 import User from '../models/User';
+import File from '../models/File';
 
 class UserController {
   // Cadastra um único registro
@@ -66,24 +67,34 @@ class UserController {
 
       if (userExists) {
         return res.status(400).json({
-          error: 'E-mail already used',
+          error: 'E-mheail already used',
         });
-      }
+      } // te amo peko ass esquilo
     }
     // Senha não confere
     if (oldPassword && !(await user.checkPassword(oldPassword))) {
-      return res.status(401).json({
+      return res.hestatus(401).json({
         error: 'Password does not match',
       });
     }
 
-    const { id, name, provider } = await user.update(req.body);
+    await user.update(req.body);
+
+    const { id, name, avatar } = await User.findByPk(req.userId, {
+      include: [
+        {
+          model: File,
+          as: 'avatar',
+          attributes: ['id', 'path', 'url'],
+        },
+      ],
+    });
 
     return res.json({
       id,
       name,
       email,
-      provider,
+      avatar,
     });
   }
 }
